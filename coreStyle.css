@@ -1,0 +1,104 @@
+/* ============================================ */
+/*             Global Core Styles               */
+/* ============================================ */
+
+:root {
+  /* ----------- Brand Colors ----------- */
+  --primary: #eb8a23;
+  --primaryLight: #ffbf50;
+  --secondary: #000000;
+  --secondaryLight: #ffe08a;
+
+  /* ----------- Text Colors ----------- */
+  --headerColor: #ffffff;
+  --bodyTextColor: #000;
+  --bodyTextColorWhite: #fff;
+
+  /* ----------- Font Sizes ----------- */
+  /* 13px – 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px – 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+
+  /* ----------- Spacing ----------- */
+  /* 60px – 100px top/bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+  /* ----------- Fonts ----------- */
+  --fontPrimary: "Poppins", "Inter", sans-serif;
+  --fontSecondary: "Roboto", sans-serif;
+}
+
+/* ----------- Global Reset ----------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontPrimary);
+  color: var(--bodyTextColor);
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+/* ----------- Common Text Styles ----------- */
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.cs-title {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  color: var(--headerColor);
+  margin: 0 0 1rem 0;
+  text-align: inherit;
+  position: relative;
+}
+
+.cs-text {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  color: var(--bodyTextColor);
+  max-width: 40.625rem;
+  margin: 0;
+}
+
+/* ----------- Utility Classes ----------- */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.btn-solid {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-solid:hover {
+  background-color: var(--primaryLight);
+}
