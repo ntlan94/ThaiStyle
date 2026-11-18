@@ -1,227 +1,468 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="coreStyle.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thai Style Irymple | Authentic Thai Cuisine &amp; Online Ordering</title>
+  <meta name="description" content="Authentic Thai cuisine made with traditional recipes and the freshest ingredients at Shop 4/2109–2111 Fifteenth Street, Irymple VIC 3498." />
 
+  <!-- Google Fonts: Poppins, Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="coreStyle.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="scroll">
-<!-- ============================================ -->
-<!--                 Navigation                   -->
-<!-- ============================================ -->
+<body>
 
-<header id="cs-navigation">
+  <!-- ============================================ -->
+  <!--                 1. Navigation                -->
+  <!-- ============================================ -->
+  <header id="cs-navigation">
     <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="" class="cs-logo" aria-label="back to home">
-            <img src="image/ThaiStyleLogo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+      <!-- Fixed casing bug: image/ThaiStyleLogo.png matches exact repository file -->
+      <a href="#hero-1785" class="cs-logo" aria-label="Thai Style Home">
+        <img src="image/ThaiStyleLogo.png" alt="Thai Style Logo" width="210" height="32" decoding="async" />
+      </a>
+
+      <nav class="cs-nav" role="navigation" aria-label="Primary Navigation">
+        <div class="cs-nav-wrapper" id="nav-wrapper">
+          <ul class="cs-nav-links" id="cs-expanded">
+            <li><a href="#hero-1785" class="cs-li-link active">Home</a></li>
+            <li><a href="#menu-section" class="cs-li-link">Menu &amp; Order</a></li>
+            <li><a href="#about-section" class="cs-li-link">Our Story</a></li>
+            <li><a href="#location" class="cs-li-link">Location &amp; Hours</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="cs-contact-group">
+        <a href="tel:0350245555" class="cs-phone">
+          <img class="cs-phone-icon" src="image/phone.png" alt="" width="20" height="20" aria-hidden="true" />
+          <span>(03) 5024 5555</span>
         </a>
-        <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
-            <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" aria-label="mobile menu toggle">
-                <div class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
-                </div>
-            </button>
-            <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li">
-                        <a href="#hero-1785" class="cs-li-link">
-                            Home
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="#cs-footer-274" class="cs-li-link">
-                            About
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Menu
-                        </a>
-                    </li>
-                    <!--
-                    <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link">
-                            Services
-                            <img class="cs-drop-icon" src="image/dropIcon.png" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                        </span>
-                        <ul class="cs-drop-ul">
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Registration</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Our Menu</a>
-                            </li>
-                        </ul>
-                    </li>
-                    -->
-                    <li class="cs-li">
-                        <a href="#cs-footer-274" class="cs-li-link">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="cs-contact-group">
-            <a href="tel:(03) 5024 5555" class="cs-phone">
-                <img class="cs-phone-icon" src="image/phone.png" alt="logo" width="24" height="24" aria-hidden="true" decoding="async">(03) 5024 5555
-            </a>
-            <div class="cs-social">
-                <a href="https://www.facebook.com/Thaifoodvan/" class="cs-social-link">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
-            </div>
-        </div>
+        <a href="#menu-section" class="btn btn-solid nav-order-btn">Order Pickup</a>
+        <button class="cs-toggle" id="mobile-toggle" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="cs-line cs-line1"></span>
+          <span class="cs-line cs-line2"></span>
+          <span class="cs-line cs-line3"></span>
+        </button>
+      </div>
     </div>
-</header>
+  </header>
 
-<!-- ============================================ -->
-<!--                    Hero                      -->
-<!-- ============================================ -->
-
-<section id="hero-1785">
+  <!-- ============================================ -->
+  <!--                    2. Hero                   -->
+  <!-- ============================================ -->
+  <section id="hero-1785">
     <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">ThaiStlye restaurant</span>
-            <h1 class="cs-title">Authentic Thai Flavors, Crafted with Heart</h1>
-            <p class="cs-text">
-                Discover authentic Thai cuisine made with traditional recipes and the freshest ingredients. From aromatic curries to vibrant street favorites.
-            </p>
-            <div class="cs-button-group">
-                <a href="" class="cs-button-solid cs-button1">Read More</a>
-            </div>
+      <div class="cs-content">
+        <div class="hero-status-pill">
+          <span class="status-dot"></span>
+          <span id="live-open-status">Fresh from the wok in Irymple</span>
         </div>
+        <span class="cs-topper" style="display:block;">Thai Style Restaurant</span>
+        <h1 class="cs-title">Authentic Thai Flavors, Crafted with Heart</h1>
+        <p class="cs-text">
+          Discover authentic Thai cuisine made with traditional recipes and the freshest local ingredients. From aromatic curries to vibrant street-food favorites, order online for fast pickup.
+        </p>
+        <div class="cs-button-group">
+          <a href="#menu-section" class="btn btn-solid">Browse Menu &amp; Order</a>
+          <a href="#location" class="btn btn-hero-secondary">Find Us in Irymple</a>
+        </div>
+      </div>
     </div>
 
-    <!-- Background Image -->
+    <!-- Hero Background Image from Local Repo -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="image/HoanhThanh.jpg">
-        <source media="(min-width: 601px)" srcset="image/HoanhThanh.jpg">
-        <img loading="lazy" decoding="async" src="image/HoanhThanh.jpg" alt="ThaiStyle" width="1920" height="1200" aria-hidden="true">
+      <img src="image/HoanhThanh.jpg" alt="Authentic Thai dishes at Thai Style" width="1920" height="1200" decoding="async" />
     </picture>
+  </section>
 
-    <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
-    <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
-    <img class="cs-graphic cs-graphic-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
-</section>
+  <!-- ============================================ -->
+  <!--                 3. Trust Bar                 -->
+  <!-- ============================================ -->
+  <section class="trust-bar" aria-label="Restaurant Highlights">
+    <div class="cs-container trust-grid">
+      <div class="trust-item">
+        <strong>100% Authentic</strong>
+        <span>Traditional family recipes</span>
+      </div>
+      <div class="trust-item">
+        <strong>Fast Local Pickup</strong>
+        <span>Prepared fresh to order</span>
+      </div>
+      <div class="trust-item">
+        <strong>Custom Spice Levels</strong>
+        <span>Mild to authentic Thai hot</span>
+      </div>
+      <div class="trust-item">
+        <strong>Irymple Favorite</strong>
+        <span>Shop 4/2109–2111 Fifteenth St</span>
+      </div>
+    </div>
+  </section>
 
-<section id="location" class="cs-container">
-  <h2 class="cs-title">Location &amp; Hours</h2>
+  <!-- ============================================ -->
+  <!--       4. Kaffenio-Style Ordering Board       -->
+  <!-- ============================================ -->
+  <main id="menu-section" class="cs-container">
+    <div class="menu-section-header">
+      <div>
+        <span class="cs-topper">Fresh From Our Kitchen</span>
+        <h2 class="cs-title" style="margin-bottom:0;">Online Menu &amp; Pickup Ordering</h2>
+      </div>
+      <p class="cs-text">
+        Choose a category from the left-hand panel to jump straight to the dishes you want, customize your protein or spice, and check out seamlessly.
+      </p>
+    </div>
 
-  <div class="loc-grid">
-    <!-- Map (Google Maps embed) -->
-    <div class="loc-map">
-      <div class="map-keep-ratio">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.6154226200388!2d142.1687162!3d-34.2328368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ac304e6261efa8d%3A0x35d9bbd5f5ecee4f!2sThai%20food%20style!5e0!3m2!1svi!2sau!4v1762594552481!5m2!1svi!2sau"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen="" 
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <!-- Search & Dietary Filter Bar -->
+    <div class="menu-controls">
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">&#128269;</span>
+        <input type="search" id="menu-search-input" placeholder="Search Pad Thai, Green Curry, Spring Rolls..." aria-label="Search menu items" />
+      </div>
+      <div class="dietary-filters" id="dietary-filter-group">
+        <button class="filter-chip active" data-filter="all">All Dishes</button>
+        <button class="filter-chip" data-filter="Popular">Popular</button>
+        <button class="filter-chip" data-filter="Vegetarian">Vegetarian Friendly</button>
+        <button class="filter-chip" data-filter="GF">Gluten-Free Option</button>
       </div>
     </div>
 
-    <!-- Address & Hours -->
-    <div class="loc-info">
-      <div class="loc-address">
-        <h3>Thai Style</h3>
-        <p>
-          Shop 4/2109–2111 Fifteenth Street<br>
-          Irymple, Victoria 3498<br><br><br>
+    <!-- Horizontal Quick Category Strip (Rendered by OOP App) -->
+    <div class="category-strip" id="category-pill-strip" role="tablist" aria-label="Menu Categories"></div>
+
+    <!-- 3-Column Kaffenio Layout -->
+    <div class="kaffenio-workspace">
+      
+      <!-- Left Sidebar: Categories with Item Counts -->
+      <aside class="kaffenio-sidebar" aria-label="Category Navigation">
+        <h3 class="sidebar-heading">Menu Categories</h3>
+        <p class="sidebar-subtext">Keep browsing without going back a screen.</p>
+        <ul class="sidebar-cat-list" id="sidebar-category-list"></ul>
+      </aside>
+
+      <!-- Center Column: Dynamic Dish Grid -->
+      <section class="kaffenio-catalog" aria-live="polite">
+        <div class="kaffenio-catalog-header">
+          <h3 id="active-category-title">Featured</h3>
+          <span id="active-category-count">0 items</span>
+        </div>
+        <div class="menu-cards-grid" id="menu-cards-container"></div>
+      </section>
+
+      <!-- Right Sidebar: Live Order & Pickup Cart -->
+      <aside class="kaffenio-cart" id="cart-sidebar" aria-label="Your Order Summary">
+        <div class="fulfillment-toggle" role="group" aria-label="Order Type">
+          <button type="button" class="fulfillment-btn active" data-mode="Pickup">Order Pickup</button>
+          <button type="button" class="fulfillment-btn" data-mode="Dine-In">Dine-In</button>
+        </div>
+
+        <div class="cart-header">
+          <h3>Your Order <span id="cart-badge-count">(0)</span></h3>
+          <button type="button" class="clear-cart-btn" id="clear-cart-btn">Clear</button>
+        </div>
+
+        <div class="cart-items-list" id="cart-items-container">
+          <div class="cart-empty-state">
+            Start with your favorite curry, stir-fry, or entrée to build your pickup order.
+          </div>
+        </div>
+
+        <div class="cart-summary-footer">
+          <div class="summary-row">
+            <span>Fulfillment</span>
+            <strong id="summary-fulfillment-label">Pickup (15–25 mins)</strong>
+          </div>
+          <div class="summary-row total">
+            <span>Total (AUD)</span>
+            <span id="cart-total-amount">$0.00</span>
+          </div>
+          <button type="button" class="btn btn-solid checkout-btn-full" id="open-checkout-btn">
+            Proceed to Checkout
+          </button>
+        </div>
+
+        <div class="recent-order-box" id="recent-order-container" style="display:none;">
+          <span> Ordered here recently?</span>
+          <button type="button" class="btn btn-outline btn-sm" id="restore-last-order-btn">Reload Last Order</button>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ============================================ -->
+  <!--          5. Our Story / Craftsmanship        -->
+  <!-- ============================================ -->
+  <section id="about-section">
+    <div class="cs-container about-grid">
+      <div class="about-image-wrapper">
+        <img src="image/ThaiFood.jpg" alt="Freshly prepared Thai cuisine" loading="lazy" />
+      </div>
+      <div class="about-content">
+        <span class="cs-topper">Crafted With Heart in Irymple</span>
+        <h2 class="cs-title">Traditional Wok Heat &amp; Fresh Herbs</h2>
+        <p class="cs-text">
+          At Thai Style, every curry paste, stir-fry sauce, and crispy entrée balances the four pillars of authentic Thai cooking: sweet, sour, salty, and aromatic spice. Whether you are grabbing a quick weekday lunch or ordering a family banquet for dinner, our kitchen cooks each dish fresh to order.
         </p>
-        <p class="loc-cta">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Shop4%2F2109%2B2111%2BFifteenth%2BStreet%2C%2BIrymple%2BVIC%2B3498"
-            target="_blank" rel="noopener">Get directions</a>            
-        </p>
+        <div class="about-features">
+          <div class="feature-box">
+            <h4>Fresh Local Produce</h4>
+            <p>Crisp seasonal vegetables, fragrant Thai basil, kaffir lime, and lemongrass.</p>
+          </div>
+          <div class="feature-box">
+            <h4>Tailored to Your Palate</h4>
+            <p>Customize proteins, spice levels, and gluten-free or vegetarian options on every dish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--             6. Location & Hours              -->
+  <!-- ============================================ -->
+  <section id="location" class="cs-container">
+    <span class="cs-topper">Visit or Pickup</span>
+    <h2 class="cs-title">Location &amp; Opening Hours</h2>
+
+    <div class="loc-grid">
+      <div class="loc-map">
+        <div class="map-keep-ratio">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.6154226200388!2d142.1687162!3d-34.2328368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ac304e6261efa8d%3A0x35d9bbd5f5ecee4f!2sThai%20food%20style!5e0!3m2!1svi!2sau!4v1762594552481!5m2!1svi!2sau"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Thai Style Google Maps Location">
+          </iframe>
+        </div>
       </div>
 
-      <ul class="loc-hours">
-        <li><span>Monday</span><span>11:00 am – 8:00 pm</span></li>
-        <li><span>Tuesday</span><span>11:00 pm – 8:00 pm</span></li>
-        <li><span>Wednesday</span><span>11:00 am – 8:00 pm</span></li>
-        <li><span>Thursday</span><span>11:00 am – 8:00 pm</span></li>
-        <li><span>Friday</span><span>11:00 am – 8:00 pm</span></li>
-        <li><span>Saturday</span><span>11:00 am – 8:00 pm</span></li>
-        <li><span>Sunday</span><span>5:00 pm – 8:30 pm</span></li>
-      </ul>
+      <div class="loc-info-card">
+        <div class="loc-address">
+          <h3>Thai Style Irymple</h3>
+          <p>
+            Shop 4/2109–2111 Fifteenth Street<br />
+            Irymple, Victoria 3498
+          </p>
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a class="btn btn-solid btn-sm"
+               href="https://www.google.com/maps/dir/?api=1&destination=Shop4%2F2109%2B2111%2BFifteenth%2BStreet%2C%2BIrymple%2BVIC%2B3498"
+               target="_blank" rel="noopener">
+              Get Directions
+            </a>
+            <a class="btn btn-outline btn-sm" href="tel:0350245555">
+              Call (03) 5024 5555
+            </a>
+          </div>
+        </div>
+
+        <!-- Fixed Tuesday 11:00 am typo from original HTML -->
+        <ul class="loc-hours" id="hours-list">
+          <li data-day="1"><span>Monday</span><span>11:00 am – 8:00 pm</span></li>
+          <li data-day="2"><span>Tuesday</span><span>11:00 am – 8:00 pm</span></li>
+          <li data-day="3"><span>Wednesday</span><span>11:00 am – 8:00 pm</span></li>
+          <li data-day="4"><span>Thursday</span><span>11:00 am – 8:00 pm</span></li>
+          <li data-day="5"><span>Friday</span><span>11:00 am – 8:00 pm</span></li>
+          <li data-day="6"><span>Saturday</span><span>11:00 am – 8:00 pm</span></li>
+          <li data-day="0"><span>Sunday</span><span>5:00 pm – 8:30 pm</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!--                   7. Footer                  -->
+  <!-- ============================================ -->
+  <footer id="cs-footer-274">
+    <div class="cs-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero-1785" class="cs-logo">
+            <img src="image/ThaiStyleLogo.png" alt="Thai Style Logo" width="210" height="32" loading="lazy" />
+          </a>
+          <p>
+            Fast to browse, authentic in flavor, and grounded in warm local Irymple hospitality.
+          </p>
+          <div class="cs-social">
+            <a class="cs-social-link" aria-label="Google Profile" target="_blank" rel="noopener"
+               href="https://www.google.com/search?hl=vi-AU&gl=au&q=Thai+food+style,+Shop4/2109+2111Fifteenth+Street,+Irymple+VIC+3498&ludocid=3880339081584766543&lsig=AB86z5WqZGyGJbGL7PHkIMy4ah9P&hl=vi&gl=AU#lrd=0x6ac304e6261efa8d:0x35d9bbd5f5ecee4f,1,,,,">
+              <img src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="Google" width="14" height="14" />
+            </a>
+            <a class="cs-social-link" aria-label="Facebook Profile" target="_blank" rel="noopener"
+               href="https://www.facebook.com/Thaifoodvan/">
+              <img src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="Facebook" width="9" height="14" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero-1785">Home</a></li>
+            <li><a href="#menu-section">Online Menu</a></li>
+            <li><a href="#about-section">Our Story</a></li>
+            <li><a href="#location">Location &amp; Hours</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Address</h4>
+          <ul class="footer-links">
+            <li><a href="tel:0350245555">(03) 5024 5555</a></li>
+            <li>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Shop4%2F2109%2B2111%2BFifteenth%2BStreet%2C%2BIrymple%2BVIC%2B3498" target="_blank" rel="noopener">
+                Shop 4/2109–2111 Fifteenth St,<br />Irymple VIC 3498
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul class="footer-links">
+            <li>Mon – Sat: 11:00 am – 8:00 pm</li>
+            <li>Sunday: 5:00 pm – 8:30 pm</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Thai Style Irymple. All rights reserved.</span>
+        <a href="#hero-1785" style="color:inherit;">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!--   8. Kaffenio-Style Mobile Checkout Bar      -->
+  <!-- ============================================ -->
+  <div class="mobile-checkout-bar" id="mobile-checkout-bar" role="button" tabindex="0">
+    <div>
+      <strong id="mobile-bar-count">0 items</strong>
+      <span style="margin-inline:0.4rem;">&bull;</span>
+      <span>View Order &amp; Checkout</span>
+    </div>
+    <strong id="mobile-bar-total">$0.00</strong>
+  </div>
+
+  <!-- ============================================ -->
+  <!--   9. Dish Customization Modal ("View item")  -->
+  <!-- ============================================ -->
+  <div class="modal-backdrop" id="item-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="cs-topper" id="modal-item-category">Category</span>
+          <h3 id="modal-item-title">Dish Name</h3>
+        </div>
+        <button type="button" class="modal-close" id="close-item-modal" aria-label="Close">&times;</button>
+      </div>
+      <p id="modal-item-desc" class="cs-text" style="margin-bottom:1.25rem;"></p>
+
+      <form id="item-customize-form">
+        <div class="form-group">
+          <label for="mod-protein">Choose Protein / Preparation</label>
+          <select id="mod-protein">
+            <option value="Chicken|0">Chicken (Included)</option>
+            <option value="Crispy Tofu & Veg|0">Crispy Tofu &amp; Vegetables (Included)</option>
+            <option value="Tender Beef|1.5">Tender Beef (+$1.50)</option>
+            <option value="Roast Duck|4.0">Roast Duck (+$4.00)</option>
+            <option value="King Prawns|4.0">King Prawns (+$4.00)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mod-spice">Spice Level</label>
+          <select id="mod-spice">
+            <option value="Mild">Mild</option>
+            <option value="Medium (Recommended)" selected>Medium (Recommended)</option>
+            <option value="Hot">Hot</option>
+            <option value="Thai Authentic Hot">Thai Authentic Hot</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mod-notes">Special Kitchen Notes (Optional)</label>
+          <input type="text" id="mod-notes" placeholder="e.g., No coriander, gluten-free soy sauce..." />
+        </div>
+
+        <button type="submit" class="btn btn-solid" style="width:100%;" id="modal-add-btn">
+          Add to Order
+        </button>
+      </form>
     </div>
   </div>
-</section>
 
-          
-<!-- ============================================ -->
-<!--                   Footer                     -->
-<!-- ============================================ -->
-
-<footer id="cs-footer-274">
-    <div class="cs-container">
-        <!-- Logo Group -->
-        <div class="cs-logo-group">
-            <a aria-label="go back to home" class="cs-logo" href="">
-                <!-- Remove the light class if you don't need the dark logo -->
-                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="image/ThaiStyleLogo.png" alt="logo" width="240" height="32">
-            </a>
-            <div class="cs-social">
-                <a class="cs-social-link" aria-label="visit google profile" href="https://www.google.com/search?hl=vi-AU&gl=au&q=Thai+food+style,+Shop4/2109+2111Fifteenth+Street,+Irymple+VIC+3498&ludocid=3880339081584766543&lsig=AB86z5WqZGyGJbGL7PHkIMy4ah9P&hl=vi&gl=AU#lrd=0x6ac304e6261efa8d:0x35d9bbd5f5ecee4f,1,,,,">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="google" width="11" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit facebook profile" href="https://www.facebook.com/Thaifoodvan/">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
-                </a>
-            </div>
+  <!-- ============================================ -->
+  <!--      10. Checkout & Order Dispatch Modal     -->
+  <!-- ============================================ -->
+  <div class="modal-backdrop" id="checkout-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="cs-topper">Confirm Your Order</span>
+          <h3>Send Order to Thai Style Kitchen</h3>
         </div>
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Contact</span>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="tel:03 5024 5555">(03) 5024 5555</a>
-            </li>
-            <!--
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="mailto:info@codestitch.com">info@codestitch.com</a>
-            </li>
-            -->
-        </ul>
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Address</span>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="">
-                    Shop 4/2109 2111 Fifteenth Street,<br>Irymple VIC 3498
-                </a>
-            </li>
-        </ul>
-        <!-- Opening hours -->
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Opening Hours</span>
-            </li>
-            <li class="cs-nav-li">
-                Monday - Saturday: 11:00 am - 8:00 pm
-            </li>
-            <li class="cs-nav-li">
-                Sunday: 5:00 pm - 8:00 pm
-            </li>
-        </ul>
+        <button type="button" class="modal-close" id="close-checkout-modal" aria-label="Close">&times;</button>
+      </div>
+
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="cust-name">Your Name *</label>
+          <input type="text" id="cust-name" required placeholder="e.g., Alex Nguyen" />
+        </div>
+        <div class="form-group">
+          <label for="cust-phone">Mobile Number (for Pickup Confirmation) *</label>
+          <input type="tel" id="cust-phone" required placeholder="e.g., 0400 123 456" />
+        </div>
+        <div class="form-group">
+          <label for="cust-time">Preferred Pickup Time</label>
+          <select id="cust-time">
+            <option value="ASAP (15-25 mins)">ASAP (15–25 mins)</option>
+            <option value="In 30 minutes">In 30 minutes</option>
+            <option value="In 45 minutes">In 45 minutes</option>
+            <option value="In 60 minutes">In 60 minutes</option>
+          </select>
+        </div>
+
+        <label style="display:block; font-weight:600; font-size:0.85rem; margin-bottom:0.4rem;">
+          Kitchen Docket Preview
+        </label>
+        <div class="docket-preview" id="checkout-docket-preview"></div>
+
+        <div style="display:grid; gap:0.65rem;">
+          <button type="submit" class="btn btn-solid" style="width:100%;">
+            Place Order &amp; Generate Confirmation
+          </button>
+          <a href="tel:0350245555" class="btn btn-outline" style="width:100%; text-align:center;">
+            Or Call Kitchen Directly: (03) 5024 5555
+          </a>
+        </div>
+      </form>
     </div>
-</footer>
-                                
-<script src="script.js" defer></script>
+  </div>
+
+  <!-- ============================================ -->
+  <!--   11. Kaffenio-Style LocalStorage Banner     -->
+  <!-- ============================================ -->
+  <aside class="storage-banner" id="storage-banner" aria-label="Privacy and Local Storage Notice">
+    <strong style="display:block; margin-bottom:0.25rem; font-size:0.875rem;">Privacy on this device</strong>
+    <p>
+      We use essential local storage to remember your cart, preferences, and device-based order history for faster ordering.
+    </p>
+    <button type="button" class="btn btn-solid btn-sm" id="accept-storage-btn">Got it</button>
+  </aside>
+
+  <!-- Main Object-Oriented Application Script -->
+  <script src="script.js" defer></script>
 </body>
-
-
-</html>   
-
-
+</html>

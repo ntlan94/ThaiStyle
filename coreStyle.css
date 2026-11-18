@@ -1,104 +1,228 @@
-/* ============================================ */
-/*             Global Core Styles               */
-/* ============================================ */
+/* ==========================================================================
+   FILE: coreStyle.css
+   PURPOSE: Global Design Tokens (CSS Variables), Reset, Typography, 
+            and Reusable Atomic UI Components (Buttons, Badges, Containers).
+   ========================================================================== */
 
 :root {
-  /* ----------- Brand Colors ----------- */
-  --primary: #eb8a23;
-  --primaryLight: #ffbf50;
-  --secondary: #000000;
-  --secondaryLight: #ffe08a;
+  /* ----------- Brand Colors (Preserved from Original ThaiStyle) ----------- */
+  --primary: #eb8a23;           /* Signature Thai Saffron Orange */
+  --primaryDark: #cf7312;       /* Darker hover state for primary buttons */
+  --primaryLight: #ffbf50;      /* Warm Gold accent */
+  --primarySoft: rgba(235, 138, 35, 0.12); /* Subtle tint for active pills */
+  --secondary: #0f0f12;         /* Rich Obsidian Black */
+  --secondaryLight: #ffe08a;    /* Soft pale gold highlight */
 
-  /* ----------- Text Colors ----------- */
+  /* ----------- Surface & Background Colors ----------- */
+  --bgBody: #faf9f6;            /* Warm off-white cafe surface */
+  --bgSurface: #ffffff;         /* Pure white card surface */
+  --bgMuted: #f2efe9;           /* Subtle stone grey for sidebars/inputs */
+  --bgDarkSurface: #18181c;     /* Elevated dark surface for header/footer */
+
+  /* ----------- Text & Border Colors ----------- */
   --headerColor: #ffffff;
-  --bodyTextColor: #000;
-  --bodyTextColorWhite: #fff;
+  --bodyTextColor: #1c1c1e;
+  --textMuted: #68676d;
+  --bodyTextColorWhite: #ffffff;
+  --borderSubtle: #e6e3dc;
 
-  /* ----------- Font Sizes ----------- */
-  /* 13px – 16px */
-  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-  /* 31px – 49px */
-  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  /* ----------- Semantic Status Colors ----------- */
+  --success: #1f9d55;
+  --danger: #d9381e;
+
+  /* ----------- Typography Scale (Fluid Clamp) ----------- */
+  --topperFontSize: clamp(0.75rem, 1.4vw, 0.875rem);
+  --headerFontSize: clamp(1.85rem, 3.6vw, 2.75rem);
+  --heroTitleSize: clamp(2.5rem, 5.5vw, 4.5rem);
   --bodyFontSize: 1rem;
 
-  /* ----------- Spacing ----------- */
-  /* 60px – 100px top/bottom */
-  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  /* ----------- Layout & Spacing Tokens ----------- */
+  --sectionPadding: clamp(3.5rem, 7vw, 5.5rem) 1.25rem;
+  --containerMaxWidth: 1320px;
+  --headerHeight: 5.25rem;
 
-  /* ----------- Fonts ----------- */
-  --fontPrimary: "Poppins", "Inter", sans-serif;
-  --fontSecondary: "Roboto", sans-serif;
+  /* ----------- Elevation, Radii & Transitions ----------- */
+  --radiusSm: 0.5rem;
+  --radiusMd: 0.875rem;
+  --radiusLg: 1.25rem;
+  --radiusFull: 9999px;
+  --shadowSm: 0 2px 8px rgba(15, 15, 18, 0.05);
+  --shadowMd: 0 10px 30px rgba(15, 15, 18, 0.08);
+  --shadowLg: 0 20px 45px rgba(15, 15, 18, 0.16);
+  --transitionFast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transitionSmooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ----------- Font Families ----------- */
+  --fontPrimary: "Poppins", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --fontDisplay: "Playfair Display", Georgia, serif;
 }
 
-/* ----------- Global Reset ----------- */
+/* ----------- Global Box-Sizing & Smooth Scroll Reset ----------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--headerHeight) + 1.5rem);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: var(--fontPrimary);
+  font-size: var(--bodyFontSize);
   color: var(--bodyTextColor);
-  background-color: #fff;
-  line-height: 1.5;
+  background-color: var(--bgBody);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* ----------- Common Text Styles ----------- */
-.cs-topper {
-  font-size: var(--topperFontSize);
-  line-height: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 0.25rem;
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ----------- Core Typography Helpers ----------- */
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
 .cs-title {
+  font-family: var(--fontDisplay);
   font-size: var(--headerFontSize);
-  font-weight: 900;
-  line-height: 1.2em;
-  color: var(--headerColor);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--bodyTextColor);
   margin: 0 0 1rem 0;
-  text-align: inherit;
-  position: relative;
 }
 
 .cs-text {
   font-size: var(--bodyFontSize);
-  line-height: 1.5em;
-  color: var(--bodyTextColor);
-  max-width: 40.625rem;
+  line-height: 1.65;
+  color: var(--textMuted);
+  max-width: 42rem;
   margin: 0;
 }
 
-/* ----------- Utility Classes ----------- */
-.text-center {
-  text-align: center;
+/* ----------- Layout Containers ----------- */
+.cs-container {
+  width: 100%;
+  max-width: var(--containerMaxWidth);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: 1rem;
+/* ----------- Reusable Button System ----------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radiusSm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--transitionFast), 
+              background-color var(--transitionFast), 
+              border-color var(--transitionFast),
+              color var(--transitionFast),
+              box-shadow var(--transitionFast);
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .btn-solid {
-  display: inline-block;
   background-color: var(--primary);
-  color: #fff;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(235, 138, 35, 0.3);
 }
 
 .btn-solid:hover {
-  background-color: var(--primaryLight);
+  background-color: var(--primaryDark);
+  box-shadow: 0 6px 20px rgba(235, 138, 35, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--borderSubtle);
+  color: var(--bodyTextColor);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--primarySoft);
+}
+
+.btn-dark {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: #27272f;
+}
+
+.btn-sm {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.825rem;
+  border-radius: 0.4rem;
+}
+
+/* ----------- Dietary & Status Badges ----------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radiusFull);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge-popular {
+  background-color: var(--primarySoft);
+  color: var(--primaryDark);
+}
+
+.badge-spicy {
+  background-color: rgba(217, 56, 30, 0.12);
+  color: var(--danger);
+}
+
+.badge-dietary {
+  background-color: rgba(31, 157, 85, 0.12);
+  color: var(--success);
 }
